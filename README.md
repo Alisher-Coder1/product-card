@@ -1,18 +1,1 @@
-# Homework №3 — Product Catalog Layout
-
-## Description
-This project contains a product catalog layout implemented using HTML and CSS.
-
-## Features
-- Semantic HTML structure
-- CSS styling
-- Product cards layout
-- Images included
-
-## Technologies
-- HTML5
-- CSS3
-
-## Preview
-See the layout in the browser or check the screenshots in the repository.
-![alt text](<Homework-3 product catalog layout.png>)
+<img width="1920" height="1080" alt="Homework-3 product catalog layout" src="https://github.com/user-attachments/assets/829ec86b-6b7e-411c-8515-7ae0433d4901" />
