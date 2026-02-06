@@ -15,3 +15,4 @@ This project contains a product catalog layout implemented using HTML and CSS.
 
 ## Preview
 See the layout in the browser or check the screenshots in the repository.
+![alt text](<Homework-3 product catalog layout.png>)
