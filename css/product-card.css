@@ -3,6 +3,7 @@
     padding-top: 220px;
     padding-bottom: 116px;
 }
+
 .catalog__container {
     position: relative;
     z-index: 1;
@@ -11,6 +12,7 @@
     margin: 0 auto;
     padding: 0 24px;
 }
+
 .catalog__background-image {
     position: absolute;
     top: 0;
@@ -26,6 +28,7 @@
     z-index: 0;
     pointer-events: none;
 }
+
 .catalog__title {
     max-width: 846px;
     margin: 0 auto;
@@ -35,6 +38,7 @@
     line-height: 78px;
     font-weight: 400;
 }
+
 .catalog__grid {
     display: flex;
     flex-wrap: wrap;
@@ -45,13 +49,14 @@
     position: relative;
     z-index: 1;
 }
+
 .product-card {
     width: 340px;
     background-color: #E5E5E5;
     padding: 35px;
     box-sizing: border-box;
-
 }
+
 .product-card__image {
     width: 280px;
     height: 245px;
@@ -59,30 +64,37 @@
     margin: 0 auto;
     object-fit: contain;
 }
+
 .product-card__type {
     font-size: 12px;
     line-height: 24px;
     text-transform: uppercase;
 }
+
 .product-card__title {
     font-size: 20px;
     line-height: 27px;
     font-weight: 700px;
 }
+
 .product-card__description {
     margin-bottom: 12px;
 }
+
 .product-card__composition-title {
     margin-bottom: 2px;
 }
+
 .product-card__composition {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
+
 .product-card___composition-item {
     padding-left: 0;
 }
+
 .product-card__composition-item::before {
     content: "\25CB";
     display: inline-block;
@@ -90,6 +102,7 @@
     margin-right: 6px;
     vertical-align: middle;
 }
+
  .product-card__price {
     display: flex;
     justify-content: space-between;
@@ -99,10 +112,12 @@
     margin-top: auto;
     padding-top: 16px;
 }
+
 .product-card__price-label {
     font-size: 20px;
     font-weight: 700;
 }
+
 .product-card__price-value {
     font-size: 20px;
 }
