@@ -1,0 +1,35 @@
+/* reset.css */
+
+/* Универсальный box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем стандартные отступы */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* Убираем маркеры списков (вернём там, где нужно) */
+ul, ol {
+  list-style: none;
+}
+
+/* Картинки ведут себя предсказуемо */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Формы наследуют шрифт */
+button,
+input,
+textarea {
+  font: inherit;
+}
