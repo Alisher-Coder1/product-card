@@ -29,7 +29,8 @@ function openGoogle() {
     window.open('https://google.com');
   } else {
     console.log('Пользователь отменил переход на Google');
-  }};
+  }
+}
 
 // Задание 3: вывод контента заголовка при наведении
 const catalogTitle = document.querySelector('.catalog__title');
@@ -38,7 +39,7 @@ catalogTitle.addEventListener('mouseover', () => {
   console.log(catalogTitle.textContent);
 });
 
-// Задание 4: кнопка меняет свой цвет (toggle)
+// Задание 4: кнопка меняет свой цвет
 const toggleButton = document.getElementById('toggle-button-color');
 
 toggleButton.addEventListener('click', () => {
