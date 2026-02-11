@@ -22,33 +22,25 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   width: 240px;
 }
-
 
 .buttons button {
   padding: 12px 14px;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 600;
-
   border-radius: 10px;
   border: 1px solid rgba(0, 0, 0, 0.18);
   background: #ffffff;
-
   cursor: pointer;
-
-  /* ✨ основная мягкая тень */
   box-shadow:
     0 4px 10px rgba(0, 0, 0, 0.08),
     0 1px 3px rgba(0, 0, 0, 0.06);
-
   transition:
     box-shadow 0.15s ease,
     transform 0.15s ease;
 }
-
 
 .buttons button:hover {
   transform: translateY(-2px);
@@ -67,14 +59,11 @@
     position: absolute;
     top: 0;
     left: 32px;
-
     width: 790px;
     height: 697px;
-
     background-image: url("/images/bg_dandelions.png");
     background-repeat: no-repeat;
     background-size: contain;
-
     z-index: 0;
     pointer-events: none;
 }
@@ -83,14 +72,11 @@
   max-width: 846px;
   margin: 0 auto;
   text-align: center;
-
   font-size: 70px;
   line-height: 78px;
   font-weight: 400;
-
-  padding-right: 0; /* ← важно */
+  padding-right: 0;
 }
-
 
 .catalog__grid {
     display: flex;
