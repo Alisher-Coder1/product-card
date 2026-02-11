@@ -14,44 +14,39 @@
 }
 
 .buttons {
-  position: absolute;
-  top: -200px; 
-  right: -20px;
-  z-index: 3;
-
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 240px;
+    position: absolute;
+    top: -200px; 
+    right: -20px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 240px;
 }
 
 .buttons button {
-  padding: 12px 14px;
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 600;
-  border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.18);
-  background: #ffffff;
-  cursor: pointer;
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.06);
-  transition:
-    box-shadow 0.15s ease,
-    transform 0.15s ease;
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08),0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.15s ease,transform 0.15s ease;
 }
 
 .buttons button:hover {
-  transform: translateY(-2px);
-  box-shadow:
+    transform: translateY(-2px);
+    box-shadow:
     0 10px 22px rgba(0, 0, 0, 0.16),
     0 4px 8px rgba(0, 0, 0, 0.10);
 }
 
 .buttons button:active {
-  transform: translateY(0);
-  box-shadow:
+     transform: translateY(0);
+     box-shadow:
     0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
@@ -69,13 +64,13 @@
 }
 
 .catalog__title {
-  max-width: 846px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 70px;
-  line-height: 78px;
-  font-weight: 400;
-  padding-right: 0;
+    max-width: 846px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 70px;
+    line-height: 78px;
+    font-weight: 400;
+    padding-right: 0;
 }
 
 .catalog__grid {
@@ -142,7 +137,7 @@
     vertical-align: middle;
 }
 
- .product-card__price {
+.product-card__price {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -161,13 +156,12 @@
     font-size: 20px;
 }
 
-/* Задание 4: смена цвета кнопки */
 #toggle-button-color {
-  background-color: #b3e20a;
-  color: #1a1a1a;
+    background-color: #b3e20a;
+    color: #1a1a1a;
 }
 
 #toggle-button-color.is-active {
-  background-color: #2b59ff;
-  color: #ffffff;
+    background-color: #2b59ff;
+    color: #ffffff;
 }
