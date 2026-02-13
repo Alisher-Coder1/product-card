@@ -30,18 +30,18 @@ checkSpeed(500000000n);
 const productName = "Ноутбук";
 const price = 1200;
 
-function tryToBuy(budget) {
+function makePurchase(budget) {
   const balance = budget - price;
 
   if (balance >= 0) {
-    console.log(`${productName} приобретен. Спасибо за покупку!`);
+    console.log(`${productName} приобретён. Спасибо за покупку!`);
   } else {
-    console.log(`Вам не хватает ${Math.abs(balance)}$. Пополните баланс.`);
+    console.log(`Вам не хватает ${Math.abs(balance)}₽. Пополните баланс.`);
   }
 }
 
-tryToBuy(1500);
-tryToBuy(800);
+makePurchase(1500);
+makePurchase(800);
 
 // Задание 6: Создание функции
 
