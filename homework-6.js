@@ -35,13 +35,13 @@ console.log("Car:", car);
 // Задание 3
 // Проверка свойства "maxSpeed"
 
-function ensureMaxSpeed(carObject) {
+function addMaxSpeed(carObject) {
   if (!("maxSpeed" in carObject)) {
     carObject.maxSpeed = 240;
   }
 }
 
-ensureMaxSpeed(car);
+addMaxSpeed(car);
 console.log("Car with maxSpeed:", car);
 
 // Задание 4
