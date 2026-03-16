@@ -1,57 +1,51 @@
 import { products } from "./products.js";
 
-//Задание 3 Шаблон одной карточки
+// Задание 3 Cоздание и реализация шаблона для продуктовых карточек.
 
- function createProductCard(product) {
-  const compositionItems = product.composition
-    .map((item) => `<li class="product-card__composition-item">${item}</li>`)
-    .join("");
-
-  return `
-    <article class="product-card">
-      <img
-        src="${product.image}"
-        alt="${product.name}"
-        class="product-card__image"
-      />
-      <p class="product-card__type">${product.type}</p>
-      <h3 class="product-card__title">${product.name}</h3>
-      <p class="product-card__description">
-        ${product.description}
-      </p>
-      <p class="product-card__composition-title">Состав:</p>
-      <ul class="product-card__composition">
-        ${compositionItems}
-      </ul>
-      <div class="product-card__price">
-        <span class="product-card__price-label">Цена</span>
-        <span class="product-card__price-value">${product.price} &#8381;</span>
-      </div>
-    </article> 
-  `;
-}
-
-//Функция которая принимает массив и выводит его в .catalog__grid
+const productTemplate = document.getElementById("product-template");
+const catalogGrid = document.querySelector(".catalog__grid");
 
 function renderProducts(productsArray) {
-  const catalogGrid = document.querySelector(".catalog__grid");
+  catalogGrid.innerHTML = "";
 
-  if (!catalogGrid) {
-    console.error("Контейнер .catalog__grid не найден");
-    return;
-  }
+  productsArray.forEach((product) => {
+    const productClone = productTemplate.content.cloneNode(true);
 
-  const cardsMarkup = productsArray.map(createProductCard).join("");
-  catalogGrid.innerHTML = cardsMarkup;
+    const productImage = productClone.querySelector(".product-card__image");
+    const productType = productClone.querySelector(".product-card__type");
+    const productTitle = productClone.querySelector(".product-card__title");
+    const productDescription = productClone.querySelector(
+      ".product-card__description",
+    );
+    const productComposition = productClone.querySelector(
+      ".product-card__composition",
+    );
+    const productPrice = productClone.querySelector(
+      ".product-card__price-value",
+    );
+
+    productImage.src = product.image;
+    productImage.alt = product.name;
+    productType.textContent = product.type;
+    productTitle.textContent = product.name;
+    productDescription.textContent = product.description;
+    productPrice.textContent = product.price + "₽";
+
+    product.composition.forEach((item) => {
+      const compositionItem = document.createElement("li");
+      compositionItem.classList.add("product-card__composition-item");
+      compositionItem.textContent = item;
+      productComposition.appendChild(compositionItem);
+    });
+
+    catalogGrid.appendChild(productClone);
+  });
 }
 
-//Задание 5
-//Реализация функции которая при старте страницы выводит сообщение (через функцию prompt) 
-// "Сколько карточек отобразить? От 1 до 5" и в зависимости от результата - будет выводить введенное количество. 
-// С защитой от ввода других значений (проверка if). То-есть: у нас будет 2 функции, 
-// одна возвращает количество карточек, которое нужно ввести, другая - рендерить эти карточки (принимая массив аргументом)
-
-function askProductsCount() {
+// Задание 5 Реализация функции, которая при старте страницы выводит сообщение (через функцию prompt)
+// "Сколько карточек отобразить? От 1 до 5" и в зависимости от результата и выводит введенное количество.
+//  С защитой от ввода других значений (проверка if). 
+function getCardsCount() {
   const userInput = prompt("Сколько карточек отобразить? От 1 до 5");
   const count = Number(userInput);
 
@@ -60,20 +54,23 @@ function askProductsCount() {
   }
 
   alert("Введите число от 1 до 5");
-  return askProductsCount();
+  return getCardsCount();
 }
 
-const count = askProductsCount();
+const count = getCardsCount();
 const visibleProducts = products.slice(0, count);
 
 renderProducts(visibleProducts);
 
-//Задание 4
-//Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
+// Задание 4 Используя метод .reduce(), получить массив объектов, 
+// где ключем является название продукта, а значением - его описание
 
 const productsDescriptions = products.reduce((acc, product) => {
-  acc[product.name] = product.description;
+  acc.push({
+    [product.name]: product.description,
+  });
+
   return acc;
-}, {});
+}, []);
 
 console.log(productsDescriptions);
