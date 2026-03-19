@@ -24,7 +24,7 @@ function renderProducts(productsArray) {
       ".product-card__price-value",
     );
 
-    productImage.src = `./image/${product.images}.png`;
+    productImage.src = `./images/${product.image}.png`;
     productImage.alt = product.name;
     productType.textContent = product.type;
     productTitle.textContent = product.name;
