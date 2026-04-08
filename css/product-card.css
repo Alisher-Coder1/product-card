@@ -162,7 +162,7 @@
   color: #ffffff;
 }
 
-/* ================= FOOTER ================= */
+/*FOOTER*/ 
 
 .footer {
   padding: 85px 84px 49px;
@@ -182,8 +182,6 @@
   align-items: flex-start;
   gap: 40px;
 }
-
-/* ================= LEFT ================= */
 
 .footer__left {
   max-width: 409px;
@@ -241,7 +239,7 @@
 .footersocial-link:hover .footersocial-icon {
   opacity: 1;
 }
-/* ================= CENTER ================= */
+/* CENTER */
 
 .footer__center {
   display: flex;
@@ -301,8 +299,6 @@
   background-color: #f3f3f3;
 }
 
-/* ================= RIGHT ================= */
-
 .footer__right {
   width: 344px;
   padding: 16px 8px;
@@ -342,8 +338,6 @@
   opacity: 0.75;
 }
 
-/* ================= BOTTOM ================= */
-
 .footer__bottom {
   display: flex;
   flex-direction: column;
@@ -367,8 +361,6 @@
   text-align: center;
 }
 
-/* ================= REGISTER BUTTON ================= */
-
 .register-button {
   display: inline-flex;
   align-items: center;
@@ -388,8 +380,6 @@
 .register-button:hover {
   opacity: 0.9;
 }
-
-/* ================= MODAL ================= */
 
 .modal {
   display: none;
@@ -454,8 +444,6 @@
   font-size: 18px;
   line-height: 1.4;
 }
-
-/* ================= RESPONSIVE ================= */
 
 @media (max-width: 1024px) {
   .footer {
