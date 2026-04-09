@@ -50,11 +50,190 @@
         </div>
       </article>
     </template>
+    <button class="register-button" id="open-register-modal">
+      Регистрация
+    </button>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__left">
+          <h2 class="footer__logo">Product Cards</h2>
+          <p class="footer__description">
+            У Нас Самые Лучшие Продукты Для Кожи!
+          </p>
 
+          <div class="footer__socials">
+            <a
+              class="footersocial-link footersocial-link--telegram"
+              href="#"
+              aria-label="Telegram"
+            >
+              <svg
+                class="footersocial-icon footersocial-icon--telegram"
+                viewBox="0 0 21 18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.9379 1.60272L17.7692 16.5465C17.5299 17.601 16.9067 17.8635 16.0209 17.367L11.1924 13.809L8.86293 16.05C8.60493 16.308 8.38968 16.5232 7.89243 16.5232L8.23968 11.6062L17.1879 3.52047C17.5772 3.17397 17.1032 2.98122 16.5834 3.32847L5.52093 10.2945L0.758428 8.80347C-0.277322 8.48022 -0.296072 7.76772 0.974428 7.27047L19.6022 0.0937215C20.4647 -0.229529 21.2192 0.285721 20.9379 1.60347V1.60272Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+
+            <a
+              class="footersocial-link footersocial-link--vk"
+              href="#"
+              aria-label="VK"
+            >
+              <svg
+                class="footersocial-icon footersocial-icon--vk"
+                viewBox="0 0 24 14"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M23.45 0.948C23.616 0.402 23.45 0 22.655 0H20.03C19.362 0 19.054 0.347 18.887 0.73C18.887 0.73 17.552 3.926 15.661 6.002C15.049 6.604 14.771 6.795 14.437 6.795C14.27 6.795 14.019 6.604 14.019 6.057V0.948C14.019 0.292 13.835 0 13.279 0H9.151C8.734 0 8.483 0.304 8.483 0.593C8.483 1.214 9.429 1.358 9.526 3.106V6.904C9.526 7.737 9.373 7.888 9.039 7.888C8.149 7.888 5.984 4.677 4.699 1.003C4.45 0.288 4.198 0 3.527 0H0.9C0.15 0 0 0.347 0 0.73C0 1.412 0.89 4.8 4.145 9.281C6.315 12.341 9.37 14 12.153 14C13.822 14 14.028 13.632 14.028 12.997V10.684C14.028 9.947 14.186 9.8 14.715 9.8C15.105 9.8 15.772 9.992 17.33 11.467C19.11 13.216 19.403 14 20.405 14H23.03C23.78 14 24.156 13.632 23.94 12.904C23.702 12.18 22.852 11.129 21.725 9.882C21.113 9.172 20.195 8.407 19.916 8.024C19.527 7.533 19.638 7.314 19.916 6.877C19.916 6.877 23.116 2.451 23.449 0.948H23.45Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__center">
+          <p class="footer__subscribe-title">Подпишись на наши акции:</p>
+
+          <form class="footer__form" id="subscribe-form">
+            <input
+              class="footer__input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Введи Email..."
+              required
+            />
+            <button class="footer__button" type="submit">Подписаться</button>
+          </form>
+        </div>
+
+        <nav class="footer__right">
+          <h3 class="footer__title">Быстрые ссылки</h3>
+
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Главная</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Магазин</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__line"></div>
+        <p class="footer__copyright">www.product-cards.com©all right reserve</p>
+      </div>
+    </footer>
+    <div class="modal" id="register-modal">
+      <div class="overlay"></div>
+      <div class="modal__content">
+        <button
+          class="modal__close"
+          type="button"
+          id="close-register-modal"
+          aria-label="Закрыть"
+        >
+          ×
+        </button>
+
+        <h2 class="modal__title">Регистрация</h2>
+
+        <form class="register-form" id="register-form">
+          <label class="register-form__label" for="first-name">Имя</label>
+          <input
+            class="register-form__input"
+            type="text"
+            id="first-name"
+            name="firstName"
+            placeholder="Введите имя"
+            required
+            minlength="2"
+          />
+
+          <label class="register-form__label" for="last-name">Фамилия</label>
+          <input
+            class="register-form__input"
+            type="text"
+            id="last-name"
+            name="lastName"
+            placeholder="Введите фамилию"
+            required
+            minlength="2"
+          />
+
+          <label class="register-form__label" for="birth-date"
+            >Дата рождения</label
+          >
+          <input
+            class="register-form__input"
+            type="date"
+            id="birth-date"
+            name="birthDate"
+            required
+          />
+
+          <label class="register-form__label" for="login">Логин</label>
+          <input
+            class="register-form__input"
+            type="text"
+            id="login"
+            name="login"
+            placeholder="Введите логин"
+            required
+            minlength="4"
+          />
+
+          <label class="register-form__label" for="password">Пароль</label>
+          <input
+            class="register-form__input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Введите пароль"
+            required
+            minlength="6"
+          />
+
+          <label class="register-form__label" for="repeat-password"
+            >Повторите пароль</label
+          >
+          <input
+            class="register-form__input"
+            type="password"
+            id="repeat-password"
+            name="repeatPassword"
+            placeholder="Повторите пароль"
+            required
+            minlength="6"
+          />
+
+          <p class="register-form__message" id="register-form-message"></p>
+
+          <button class="register-form__button" type="submit">
+            Зарегистрироваться
+          </button>
+        </form>
+      </div>
+    </div>
     <script src="./script.js"></script>
     <script src="./homework-5.js"></script>
     <script src="./homework-6.js"></script>
     <script type="module" src="./homework-7.js"></script>
     <script type="module" src="./homework-8.js"></script>
+    <script type="module" src="./homework-9.js"></script>
   </body>
 </html>
