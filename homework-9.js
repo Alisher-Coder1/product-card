@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     subscribeForm.reset();
   });
 });
-
+/*
 //ПУНКТ 5 Модальное Окно
 document.addEventListener("DOMContentLoaded", function () {
   const openBtn = document.getElementById("open-register-modal");
@@ -37,12 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
   closeBtn.addEventListener("click", function () {
     modal.classList.remove("modal-showed");
   });
+  
   //Закрытие по клику на затемненный фон (overlay)
   overlay.addEventListener("click", function () {
-    modal.classList.remove("modal-showed");
   });
 });
-
+*/
+/*
 //Пункт 6 Форма регистрации
 //Глобальная переменная пользователя
 let user = null;
@@ -94,3 +95,4 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.classList.remove("modal-showed");
   });
 });
+*/
