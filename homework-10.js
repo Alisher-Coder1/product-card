@@ -80,16 +80,3 @@ const penoplex = new InsulationMaterial("Penoplex", 1200, "0.032 W/mK");
 cement.showInfo();
 penoplex.showInfo();
 penoplex.showThermalInfo();
-
-// Задание 4.1 Подключение логики с использованием класса
-document.addEventListener("DOMContentLoaded", function () {
-  const openBtn = document.getElementById("open-register-modal");
-
-  if (!openBtn) return;
-
-  const registerModal = new Modal("register-modal");
-
-  openBtn.addEventListener("click", function () {
-    registerModal.open();
-  });
-});

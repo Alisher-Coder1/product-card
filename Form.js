@@ -16,12 +16,10 @@ export default class Form {
   }
 
   reset() {
-    if (!this.form) return;
     this.form.reset();
   }
 
   reportValidity() {
-    if (!this.form) return;
     this.form.reportValidity();
   }
 }
