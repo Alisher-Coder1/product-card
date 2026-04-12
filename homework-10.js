@@ -1,5 +1,7 @@
 import Modal from "./Modal.js";
 import Form from "./Form.js";
+import BuildingMaterial from "./BuildingMaterial.js";
+import InsulationMaterial from "./InsulationMaterial.js";
 
 // Задание 4 и 5
 let user = null;
@@ -50,30 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Задание 3 Пример наследумости классов
-class BuildingMaterial {
-  constructor(name, price) {
-    this.name = name;
-    this.price = price;
-  }
-
-  showInfo() {
-    console.log(`${this.name} costs ${this.price} RUB`);
-  }
-}
-
-class InsulationMaterial extends BuildingMaterial {
-  constructor(name, price, thermalConductivity) {
-    super(name, price);
-    this.thermalConductivity = thermalConductivity;
-  }
-
-  showThermalInfo() {
-    console.log(
-      `${this.name} has thermal conductivity ${this.thermalConductivity}`,
-    );
-  }
-}
-
 const cement = new BuildingMaterial("Cement", 500);
 const penoplex = new InsulationMaterial("Penoplex", 1200, "0.032 W/mK");
 
