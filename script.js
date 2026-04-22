@@ -2,10 +2,12 @@
 const recolorBackgroundFirstCardButton = document.getElementById(
   "recolor-background-first-card-button",
 );
-const firstProductCard = document.querySelector(".product-card");
 const blueHashColor = "#0000ff";
 
 recolorBackgroundFirstCardButton.addEventListener("click", () => {
+  const firstProductCard = document.querySelector(".product-card");
+  if (!firstProductCard) return;
+
   firstProductCard.style.backgroundColor = blueHashColor;
 });
 
@@ -13,10 +15,12 @@ recolorBackgroundFirstCardButton.addEventListener("click", () => {
 const recolorBackgroundAllCardsButton = document.getElementById(
   "recolor-background-all-cards-button",
 );
-const allProductCards = document.querySelectorAll(".product-card");
 const greenHashColor = "#00ff44";
 
 recolorBackgroundAllCardsButton.addEventListener("click", () => {
+  const allProductCards = document.querySelectorAll(".product-card");
+  if (!allProductCards.length) return;
+
   allProductCards.forEach((card) => {
     card.style.backgroundColor = greenHashColor;
   });
