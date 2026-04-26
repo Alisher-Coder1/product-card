@@ -2,7 +2,7 @@ export default class Drink {
   #temperature;
 
   constructor(name, size, price, temperature) {
-    if (new target() === Drink) {
+    if (new.target === Drink) {
       throw new Error(
         "Drink is an abstract class and cannot be instantiated directly",
       );
