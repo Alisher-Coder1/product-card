@@ -25,10 +25,10 @@ export default class Drink {
   }
 
   #prepare() {
-    console.log(`$(this.name) is being prepared`);
+    console.log(`${this.name} is being prepared`);
   }
   serve() {
     this.#prepare();
-    console.log(`$(this.name) is served`);
+    console.log(`${this.name} is served`);
   }
 }
