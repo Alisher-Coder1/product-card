@@ -26,15 +26,11 @@ function delay(ms) {
   });
 }
 
-// Функция чтения пользователей из localStorage
+// Получает пользователей из localStorage
 function getUsersFromStorage() {
   const users = localStorage.getItem(USERS_STORAGE_KEY);
 
-  if (users === null) {
-    return null;
-  }
-
-  return JSON.parse(users);
+  return users ? JSON.parse(users) : null;
 }
 
 // Сохраняем массив пользователей в localStorage
@@ -57,7 +53,31 @@ async function fetchUsers() {
   return response.json();
 }
 
-//Отрисовываем карточки пользователей на страницу
+// Создаёт одну карточку пользователя
+function createUserCard(user) {
+  const userCard = document.createElement("div");
+  userCard.classList.add("user-card");
+
+  const userName = document.createElement("h3");
+  userName.textContent = `${user.name} ${user.surname}`;
+
+  const userEmail = document.createElement("p");
+  userEmail.textContent = `Email: ${user.email}`;
+
+  const userAge = document.createElement("p");
+  userAge.textContent = `Age: ${user.age}`;
+
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("delete-button");
+  deleteButton.dataset.userId = user.id;
+  deleteButton.textContent = "Удалить карточку";
+
+  userCard.append(userName, userEmail, userAge, deleteButton);
+
+  return userCard;
+}
+
+// Отрисовывает карточки пользователей на странице
 function renderUsers(users) {
   usersListElement.innerHTML = "";
 
@@ -69,23 +89,14 @@ function renderUsers(users) {
   showStatus("");
 
   users.forEach((user) => {
-    const userCard = document.createElement("div");
-    userCard.classList.add("user-card");
-
-    userCard.innerHTML = `<h3>${user.name} ${user.surname}</h3>
-      <p><strong>Email:</strong> ${user.email}</p>
-      <p><strong>Age:</strong> ${user.age}</p>
-      <button class="delete-button" data-user-id="${user.id}">
-        Удалить карточку
-      </button>`;
-
+    const userCard = createUserCard(user);
     usersListElement.append(userCard);
   });
 }
 
 //Загружаем пользователей при первом открытии страницы
 // Проверяем localStorage, если данные есть показываем их, если данных нет загружаем из users.json
-async function loadInitialUsers() {
+async function initUsers() {
   try {
     const storedUsers = getUsersFromStorage();
 
@@ -125,7 +136,12 @@ async function loadAllUsers() {
 // Берем одного пользователя из localStorage, удаляем нужного по id, сохраняем новый массив
 //и заново рисуем карточки
 function deleteUser(userId) {
-  const users = getUsersFromStorage() || [];
+  const users = getUsersFromStorage();
+
+  if (!users || users.length === 0) {
+    showStatus("Пользователей нет");
+    return;
+  }
 
   const updatedUsers = users.filter((user) => {
     return user.id !== userId;
@@ -166,4 +182,4 @@ clearUsersButton.addEventListener("click", () => {
 });
 
 //Запускаем загрузку пользователей при открытии страницы
-loadInitialUsers();
+initUsers();

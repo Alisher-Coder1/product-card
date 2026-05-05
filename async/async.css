@@ -1,0 +1,77 @@
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f3f3f3;
+        color: #222;
+      }
+
+      .page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+
+      .loading,
+      .message {
+        text-align: center;
+        font-size: 22px;
+        margin-top: 80px;
+      }
+
+      .actions {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #222;
+        color: white;
+      }
+
+      .button:hover {
+        opacity: 0.85;
+      }
+
+      .users-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+
+      .user-card {
+        background: white;
+        border-radius: 10px;
+        padding: 18px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      }
+
+      .user-card h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+
+      .user-card p {
+        margin: 6px 0;
+      }
+
+      .delete-button {
+        margin-top: 12px;
+        padding: 8px 12px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #c0392b;
+        color: white;
+      }
