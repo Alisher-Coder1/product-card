@@ -1,0 +1,30 @@
+<!-- Страница для асинхронной загрузки и отображения пользователей -->
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Users</title>
+    <link rel="stylesheet" href="./async.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1 class="title">Пользователи</h1>
+
+      <div class="actions">
+        <button class="button" id="load-users-button">
+          Получить всех пользователей
+        </button>
+        <button class="button" id="clear-users-button">
+          Удалить все карточки
+        </button>
+      </div>
+
+      <div id="status" class="loading">Данные загружаются...</div>
+
+      <div id="users-list" class="users-list"></div>
+    </main>
+
+    <script src="./async.js"></script>
+  </body>
+</html>
